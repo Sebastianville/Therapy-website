@@ -15,14 +15,15 @@ providerRouter.get('/', async (req, res, next) => {
 
 //GET proivder by ID
 providerRouter.get('/:id', async (req, res, next) => {
-    try {
-        const provider = await Provider.find()
-        if (!provider) return res.status(404).send("provider not found")
-        res.status(200).json(user)
-    } catch (error) {
-        next(error)
-    }
+  try {
+      const provider = await Provider.findById(req.params.id)
+      if (!provider) return res.status(404).send("Provider not found")
+      res.status(200).json(provider);
+  } catch (error) {
+      next(error)
+  }
 });
+
 
 // Create a new user
 providerRouter.post("/", async (req, res, next) => {
