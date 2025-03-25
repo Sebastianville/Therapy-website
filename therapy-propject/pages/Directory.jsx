@@ -12,7 +12,9 @@ function Directory () {
           .then((response) => setProviders(response.data))
           .catch((error) => console.error("Error fetching providers:", error));
       }, []);
-    
+
+      //You don't want a useEffect. You want to listen to the onClick
+     
 
 
 
@@ -23,7 +25,7 @@ function Directory () {
             <div>
             {providers.map((provider) => (
               <Link
-                to={`/api/providers/${provider._id}`}
+                to={`/directory/${provider._id}`}
                 key={provider._id}>
                 <div className="w-full bg-gray-100 rounded-2xl overflow-hidden shadow-md transition-transform duration-300 ease-in-out flex flex-col hover:translate-y-[-10px] hover:shadow-lg">
                 <div className="p-5 flex flex-col justify-between">

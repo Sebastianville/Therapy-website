@@ -7,7 +7,8 @@ function HomePage() {
   useEffect(() => {
     axios.get('/api/providers')
       .then(response => {
-        setProviders(response.data.slice(0, 2));  
+        //increase the number now that I have more data
+        setProviders(response.data.slice(0, 6));  
       })
       .catch(error => {
         console.error('Error fetching providers:', error);

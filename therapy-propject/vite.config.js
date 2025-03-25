@@ -9,7 +9,7 @@ export default defineConfig({
     proxy: {
       "/api": {
         // This is where we are going to put the netlify link
-        target: "http://localhost:5000",
+        target: "http://localhost:4000",
         changeOrigin: true,
       },
     },

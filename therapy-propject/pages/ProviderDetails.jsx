@@ -1,9 +1,10 @@
 import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
 
 function ProviderDetails () {
     const {id} = useParams()
+    const navigate = useNavigate()
 
     const [provider, setProvider] = useState(null)
 
@@ -26,6 +27,19 @@ function ProviderDetails () {
         // .catch((error) => console.error(`Error fetching provider details:`, error))
     }, [id])
 
+    const deleteProviders = async(id) => {
+        try {
+          //this line will handle the backend
+          await axios.delete(`/api/providers/${id}`)
+          //this will handle the state in the fronend
+        //   setProviders(providers.filter((p) => p._id !== id))
+        navigate("/directory")
+        } catch (error) {
+          console.error(`Couldn't delete a provider: `, error)          
+        }
+      }
+    
+
     if(!provider) return (
         <div>
             <h2>loading....</h2>
@@ -39,6 +53,7 @@ function ProviderDetails () {
           <p><strong>Languages:</strong> {provider.languages.join(", ")}</p>
           <p><strong>Phone:</strong> {provider.contact.phone}</p>
           <p><strong>Email:</strong> {provider.contact.email}</p>
+          <button onClick={() => deleteProviders(id)}> delete button </button>
         </div>
       );
 }
