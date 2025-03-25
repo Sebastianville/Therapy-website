@@ -22,3 +22,45 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+.env
+
+
+
+# Code for navbar if I need to change
+#     <div className="flex flex-wrap items-center justify-between p-4 bg-white">
+#   {/* Company Name */}
+#   <div className="w-full md:w-auto mb-4 md:mb-0">
+#     <h1 className="text-lg font-semibold text-teal-600">Company Name</h1>
+#   </div>
+
+#   {/* Navigation Links */}
+#   <ul className="flex justify-center space-x-6 text-gray-700">
+#     <li>
+#       <Link to="/" className="text-teal-600 font-medium hover:underline">
+#         HomePage
+#       </Link>
+#     </li>
+#     <li>
+#       <Link to="/directory" className="text-teal-600 font-medium hover:underline">
+#         Directory
+#       </Link>
+#     </li>
+#     <li>
+#       <Link to="/about" className="text-teal-600 font-medium hover:underline">
+#         About Us
+#       </Link>
+#     </li>
+#     <li>
+#       <Link to="/news" className="text-teal-600 font-medium hover:underline">
+#         NewsPage
+#       </Link>
+#     </li>
+#   </ul>
+
+#   {/* Login Button */}
+#   <div className="mt-2 md:mt-0">
+#     <button className="border border-teal-600 text-teal-600 px-4 py-2 rounded-md hover:bg-teal-600 hover:text-white transition">
+#       Login
+#     </button>
+#   </div>
+# </div>
