@@ -8,6 +8,7 @@ import About from '../pages/About';
 import News from '../pages/News';
 import Footer from '../components/Footer';
 import ProviderDetails from '../pages/ProviderDetails';
+import JoinTheTeam from '../pages/JoinTheTeam';
 
 
 
@@ -27,6 +28,7 @@ function App() {
         <Route path="/directory" element={<Directory />} />
         <Route path="/directory/:id" element={<ProviderDetails />} /> 
         <Route path="/about" element={<About />} />
+        <Route path="/joinus" element={<JoinTheTeam />} />
         <Route path="/news" element={<News />} />
       </Routes>
 

@@ -17,6 +17,9 @@ function HomePage() {
 
   return (
     <div className="w-full min-h-screen bg-white">
+
+      <h1>Welcome to Company Name</h1>
+      <p>We hope to be of support when finding the right provider. Please don't hesistate to browse around. </p>
         
       {/* Hero Section */}
       <section className="text-center py-12 bg-soft-teal text-white">
