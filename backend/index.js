@@ -11,6 +11,7 @@ import { errorHandler } from "./middleware/errorHandler.js";
 import { healthRouter } from "./routes/health.js";
 import { providerRouter } from "./routes/provider.js";
 import {userRouter} from './routes/user.js'
+import seedRouter from "./routes/seed.js";
 
 dotenv.config();
 // console.log(process.env.MONGODB_URI);
@@ -21,7 +22,7 @@ await mongoose
   .then(() => console.log("Connected to MongoDB"))
   .catch((e) => console.error(e));
 
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 4000;
 
 const app = express();
 
@@ -47,6 +48,7 @@ app.get("/", (req, res) => {
 app.use("/api/health", healthRouter);
 app.use("/api/providers", providerRouter)
 app.use("/api/users", userRouter)
+app.use("/api/seed", seedRouter)
 
 
 // Global error handling
