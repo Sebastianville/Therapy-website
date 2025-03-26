@@ -29,7 +29,7 @@ function HomePage() {
 
       {/* Featured Providers */}
       <section className="px-6 py-12">
-        <h2 className="text-2xl font-semibold text-center text-gray-800">Featured Providers</h2>
+        <h2 className="text-2xl font-semibold text-center text-teal-600">Featured Providers</h2>
         
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 p-2 justify-items-center">
           {providers.map((provider) => (

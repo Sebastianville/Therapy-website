@@ -37,7 +37,7 @@ function Directory () {
           <div>
             {providers.map((provider) => (
               <Link to={`/directory/${provider._id}`} key={provider._id}>
-                <div className="w-full bg-gray-100 rounded-2xl overflow-hidden shadow-md transition-transform duration-300 ease-in-out flex flex-col hover:translate-y-[-10px] hover:shadow-lg">
+                <div className="w-full bg-gray-100 rounded-2xl mb-4 overflow-hidden shadow-md transition-transform duration-300 ease-in-out flex flex-col hover:translate-y-[-10px] hover:shadow-lg">
                   <div className="p-5 grid gap-2 flex flex-col justify-between">
                     <h3 className="text-xl font-semibold">
                       {provider.first_name} {provider.last_name}
