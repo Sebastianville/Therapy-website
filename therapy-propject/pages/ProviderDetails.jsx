@@ -47,15 +47,37 @@ function ProviderDetails () {
     )
 
     return (
-        <div>
-          <h1>{provider.first_name} {provider.last_name}</h1>
-          <p><strong>Specialty:</strong> {provider.specality.join(", ")}</p>
-          <p><strong>Languages:</strong> {provider.languages.join(", ")}</p>
-          <p><strong>Phone:</strong> {provider.contact.phone}</p>
-          <p><strong>Email:</strong> {provider.contact.email}</p>
-          <button onClick={() => deleteProviders(id)}> delete button </button>
+      <div className="max-w-4xl mx-auto p-6 pt-6 bg-white shadow-2xl rounded-lg mt-10 mb-10">
+        
+        <h1 className="text-3xl font semibold text-teal-600 mb-4" >{provider.first_name} {provider.last_name}</h1>
+
+        {/* soace-y-number addes spacing between the vertical children of the element */}
+        <div className="space-y-3" >
+          <p className="text-lg text-gray-700">
+            <strong className="font-medium">Specialty:</strong> {provider.specality.join(", ")}
+          </p>
+
+          <p className="text-lg text-gray-700">
+            <strong className="font-medium">Languages:</strong> {provider.languages.join(", ")}
+          </p>
+
+          <p className="text-lg text-gray-700">
+            <strong className="font-medium">Phone:</strong> {provider.contact.phone}
+          </p>
+
+          <p className="text-lg text-gray-700">
+            <strong className="font-medium">Email:</strong> {provider.contact.email}
+          </p>
+
         </div>
-      );
+    
+        <div className="mt-5">
+          <button onClick={() => deleteProviders(id)} className="w-full py-2 px-4 bg-teal-500 text-white font-semibold rounded-lg hover:bg-red-500 transition duration-200 ">
+            Delete
+          </button>
+        </div>
+      </div>
+    );
 }
 
 export default ProviderDetails;

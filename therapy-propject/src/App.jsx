@@ -23,7 +23,7 @@ function App() {
       This text should use Cormorant Garamond
       </div> */}
      <div>
-     <Routes>
+     <Routes className="pt-16 mt-10 mb-10">
         <Route path="/" element={<HomePage />} />
         <Route path="/directory" element={<Directory />} />
         <Route path="/directory/:id" element={<ProviderDetails />} /> 
