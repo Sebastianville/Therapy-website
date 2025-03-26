@@ -4,7 +4,12 @@ import { plugin } from "postcss";
 export default {
     content: ["./index.html", "./src/**/*.{js,jsx,ts,tsx}"], 
     theme: {
-        extend: {}, 
+        extend: {
+            colors: {
+                // This isn't working
+                'light-green': '#D9E4DD', 
+            },
+        },
     },
     plugins: [],
 }

@@ -5,6 +5,7 @@ import axios from "axios"
 
 function Directory () {
     const [providers, setProviders] = useState([])
+    
 
     useEffect(() => {
         axios
@@ -20,7 +21,7 @@ function Directory () {
 
       return (
         <div className="max-w-6xl mx-auto p-6" >
-          <h1> Directory</h1>
+          <h1 className="text-2xl font-semibold text-teal-600 text-center mb-7"> Directory</h1>
           {/* <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 p-2 justify-items-center"> */}
             <div>
             {providers.map((provider) => (
@@ -28,7 +29,7 @@ function Directory () {
                 to={`/directory/${provider._id}`}
                 key={provider._id}>
                 <div className="w-full bg-gray-100 rounded-2xl overflow-hidden shadow-md transition-transform duration-300 ease-in-out flex flex-col hover:translate-y-[-10px] hover:shadow-lg">
-                <div className="p-5 flex flex-col justify-between">
+                <div className="p-5 grid gap-2 flex flex-col justify-between">
                 <h3 className="text-xl font-semibold">{provider.first_name} {provider.last_name}</h3>
                 <p className="text-gray-600"><strong>Specialization:</strong> {provider.specality.join(', ')}</p>
                 <p className="text-gray-600"><strong>Languages:</strong> {provider.languages.join(', ')}</p>

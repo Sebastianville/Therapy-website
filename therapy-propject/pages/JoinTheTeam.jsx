@@ -8,16 +8,8 @@ import * as yup from "yup";
 const JoinUsSchema = yup.object().shape({
   first_name: yup.string().required("First name is required"),
   last_name: yup.string().required("Last name is required"),
-  specality: yup
-    .array()
-    .of(yup.string().required("Each specialty is required"))
-    .min(1, "Add at least one specialty")
-    .required("Add your specialties. You can add more than one"),
-  languages: yup
-    .array()
-    .of(yup.string().required("Each language is required"))
-    .min(1, "Add at least one language")
-    .required("Add the languages you are able to speak to our members"),
+  specality: yup.array().of(yup.string().required("Each specialty is required")).min(1, "Add at least one specialty").required("Add your specialties. You can add more than one"),
+  languages: yup.array().of(yup.string().required("Each language is required")).min(1, "Add at least one language").required("Add the languages you are able to speak to our members"),
   insurance: yup
     .array()
     .of(
@@ -29,14 +21,8 @@ const JoinUsSchema = yup.object().shape({
     .min(1, "Add at least one insurance plan")
     .required("INsurance information is required"),
   contact: yup.object().shape({
-    phone: yup
-      .string()
-      .matches(/^\d{11}$/, "Phone number must be 11 digits")
-      .required("Phone number is required"),
-    email: yup
-      .string()
-      .email("Email must be a valid email address")
-      .required("Email is required"),
+    phone: yup.string().matches(/^\d{11}$/, "Phone number must be 11 digits").required("Phone number is required"),
+    email: yup.string().email("Email must be a valid email address").required("Email is required"),
   }),
 });
 
@@ -200,7 +186,7 @@ function JoinTheTeam() {
           name="contact.email"
           type="text"
           onChange={formik.handleChange}
-          value={formik.values.contact?.email || ""} // <- Add fallback to empty string
+          value={formik.values.contact?.email || ""}
           className="w-full border border-gray-300 rounded-md p-2 mt-1"
         />
         {formik.errors.contact?.email && (
