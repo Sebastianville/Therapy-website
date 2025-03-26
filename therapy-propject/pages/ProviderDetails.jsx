@@ -75,6 +75,10 @@ function ProviderDetails () {
           <button onClick={() => deleteProviders(id)} className="w-full py-2 px-4 bg-teal-500 text-white font-semibold rounded-lg hover:bg-red-500 transition duration-200 ">
             Delete
           </button>
+
+          <button onClick={() => navigate(`/updateproviderinfo/${id}`)}  className="text-blue-500 underline">
+          Edit
+          </button>
         </div>
       </div>
     );

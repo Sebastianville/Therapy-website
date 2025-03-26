@@ -9,6 +9,7 @@ import News from '../pages/News';
 import Footer from '../components/Footer';
 import ProviderDetails from '../pages/ProviderDetails';
 import JoinTheTeam from '../pages/JoinTheTeam';
+import UpdateProviderInfo from '../pages/UpdateProviderInfo';
 
 
 
@@ -16,7 +17,7 @@ function App() {
 
 
   return (
-    <div>
+    <div >
       <NavBar />
       
       {/* <div className="font-cormorant">
@@ -30,6 +31,8 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/joinus" element={<JoinTheTeam />} />
         <Route path="/news" element={<News />} />
+        <Route path="/updateproviderinfo/:id" element={<UpdateProviderInfo />} />
+        
       </Routes>
 
      </div>

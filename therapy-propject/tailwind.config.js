@@ -7,7 +7,7 @@ export default {
         extend: {
             colors: {
                 // This isn't working
-                'light-green': '#D9E4DD', 
+                'light-green': {'500': '#D9E4DD'}, 
             },
         },
     },

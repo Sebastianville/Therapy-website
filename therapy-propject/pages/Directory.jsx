@@ -32,7 +32,7 @@ function Directory () {
         {/* <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 p-2 justify-items-center"> */}
   
         {loading ? (
-          <p className="text-teal-600 italic text-center">Loading providers...</p> // Loading message
+          <p className="text-teal-600 italic text-center">Loading providers...</p> 
         ) : (
           <div>
             {providers.map((provider) => (
