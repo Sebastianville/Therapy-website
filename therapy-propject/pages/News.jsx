@@ -5,13 +5,13 @@ function News () {
 
     const [news, setNews] = useState([])
     const [loading, setLoading] =useState(true)
-    axios.defaults.baseURL = 'https://newsapi.org/v2/top-headlines/';
+    // axios.defaults.baseURL = 'https://newsapi.org/v2/top-headlines/';
 
     useEffect(() => {
         const fetchNewsDetails = async() => {
             try {
                 //this page limit isn't working 
-                const response = await axios.get(`sources?apiKey=${import.meta.env.VITE_NEWS_API_KEY}&pageSize=5`)
+                const response = await axios.get(`https://newsapi.org/v2/top-headlines/sources?apiKey=${import.meta.env.VITE_NEWS_API_KEY}&pageSize=5`)
                 // console.log(response.data) 
                 setNews(response.data.sources)
             } catch (error) {

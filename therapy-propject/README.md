@@ -1,12 +1,22 @@
-# React + Vite
+# Therapy Project
+A web application designed to connect patients with healthcare providers. Users can browse, filter, and view provider details, including accepted insurance plans. The platform allows providers to manage their information while ensuring a seamless experience for users.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 🚀 Features
+- Browse a directory of healthcare providers
+- View provider details including specialty, languages, and accepted insurance plans
+- Add, edit, and delete provider information (admin access)
+- User-friendly interface with responsive design
 
-Currently, two official plugins are available:
+## 🛠️ Technologies Used
+### **Frontend**
+- React.js (with Tailwind CSS for styling)
+- React Router for navigation
+- Axios for API calls
+- Utilized Google Font- Cormorant Garamond
+- Formik, Yup, and enableReinitialize for schema validation on the Frontend
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### **Backend**
+- Node.js with Express.js
+- MongoDB with Mongoose for database management
+- RESTful API for handling provider data

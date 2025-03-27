@@ -6,7 +6,7 @@ function NavBar() {
     <nav className="bg-teal-600 p-4">
       <div className="flex items-center justify-between max-w-7xl mx-auto">
         {/* Company Name */}
-        <h1 className="text-white text-xl font-semibold">Company Name</h1>
+        <h1 className="text-white text-xl font-semibold">MedClick</h1>
 
         {/* Navigation Links */}
         <div className="flex space-x-6 text-white font-medium">

@@ -18,13 +18,10 @@ function HomePage() {
   return (
     <div className="w-full min-h-screen bg-white">
 
-      <h1>Welcome to Company Name</h1>
-      <p>We hope to be of support when finding the right provider. Please don't hesistate to browse around. </p>
-        
       {/* Hero Section */}
-      <section className="text-center py-12 bg-soft-teal text-white">
-        <h1 className="text-4xl font-semibold">Welcome to Wellness Providers</h1>
-        <p className="mt-2 text-lg">Connecting you with the best wellness professionals.</p>
+      <section className="text-center py-12 bg-soft-teal text-black">
+        <h1 className="text-4xl font-semibold">Welcome to MedClick</h1>
+        <p className="mt-2 text-lg mt-6">We hope to be of support when finding the right provider. Please don't hesistate to browse around</p>
       </section>
 
       {/* Featured Providers */}
