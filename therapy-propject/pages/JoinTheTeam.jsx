@@ -251,7 +251,7 @@ function JoinTheTeam() {
               {plan: "",  provider: "" },
             ]);
           }}
-          className="mt-2 bg-blue-500 text-white font-semibold py-1 px-3 rounded-md"
+          className="mt-2 bg-teal-500 text-white font-semibold py-1 px-3 rounded-md"
         >
           + Add Insurance
         </button>
