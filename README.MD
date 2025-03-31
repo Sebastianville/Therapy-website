@@ -1,5 +1,5 @@
 # Therapy Project
-A web application designed to connect patients with healthcare providers. Users can browse, filter, and view provider details, including accepted insurance plans. The platform allows providers to manage their information while ensuring a seamless experience for users.
+A web application designed to connect patients with healthcare providers. Users can browse, filter, and view provider details, including accepted insurance plans. The platform allows providers to manage their information while ensuring a seamless experience for users. https://app.netlify.com/sites/medclicksv/overview
 
 ## 🚀 Features
 - Browse a directory of healthcare providers
